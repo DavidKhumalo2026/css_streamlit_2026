@@ -36,8 +36,8 @@ st.write(f"**ORCiD:** {ORCiD}")
 
 
 # Streamlit app title
-st.title("Publication")
-
+st.header ("Publication")
+st.write (Effectiveness of high-intensity interval training and moderate-intensity continuous training on cardiometabolic health in university labourers)
 # Input field for the file URL
 url = st.text_input("https://doi.org/10.18772/26180197.2024.v6n1a4")
 
@@ -175,6 +175,7 @@ email = "david.khumalo@gmail.com"
 LinkedIn= "www.linkedin.com/in/david-vusumuzi-khumalo-1924a424"
 
 st.write(f"You can reach {name} at {email}{LinkedIn}.")
+
 
 
 
