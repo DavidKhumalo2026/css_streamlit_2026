@@ -61,43 +61,6 @@ st.download_button(
 )
 
 
-How It Works
-
-df.to_csv(index=False)
-Converts the DataFrame to CSV format without the index column.
-st.download_button
-
-label: Button text.
-data: The CSV string.
-file_name: The name of the downloaded file.
-mime: MIME type for CSV (text/csv).
-
-
-
-✅ Edge Cases Handled
-
-Works with any DataFrame size.
-No index column in the CSV unless you want it.
-UTF-8 encoding ensures special characters are preserved.
-
-
-If you want larger datasets to download faster, you can encode the CSV as bytes:
-Pythoncsv_bytes = df.to_csv(index=False).encode('utf-8')
-st.download_button("Download CSV", csv_bytes, "data.csv", "text/csv")
-
-
-Do you want me to extend this so the CSV is generated from user-uploaded data in Streamlit? That way, users can upload, view, and download their own tables.
-
-
-
-
-
-
-
-
-
-
-
 # Add a section for publications
 st.header("Publications")
 uploaded_file = st.file_uploader("Upload a CSV of Publications", type="csv")
@@ -197,6 +160,7 @@ email = "david.khumalo@gmail.com"
 LinkedIn= "www.linkedin.com/in/david-vusumuzi-khumalo-1924a424"
 
 st.write(f"You can reach {name} at {email}{LinkedIn}.")
+
 
 
 
