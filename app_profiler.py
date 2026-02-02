@@ -45,10 +45,10 @@ pdf_file_path = "https://doi.org/10.18772/26180197.2024.v6n1a4"  # Replace with 
 
     # Create a download button
     st.download_button(
-        label="⬇️ Download PDF",
+        label="⬇️ Download file",
         data=pdf_bytes,
-        file_name="document.pdf",  # Name for the downloaded file
-        mime="application/pdf"
+        file_name="https://doi.org/10.18772/26180197.2024.v6n1a4",  # Name for the downloaded file
+        mime="https://doi.org/10.18772/26180197.2024.v6n1a4"
     )
 
 # Add a section for publications
@@ -150,6 +150,7 @@ email = "david.khumalo@gmail.com"
 LinkedIn= "www.linkedin.com/in/david-vusumuzi-khumalo-1924a424"
 
 st.write(f"You can reach {name} at {email}{LinkedIn}.")
+
 
 
 
