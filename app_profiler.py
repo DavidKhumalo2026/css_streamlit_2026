@@ -43,11 +43,6 @@ st.title("📄 Download Publications")
 # Path to your local PDF file
 pdf_file_path = "https://doi.org/10.18772/26180197.2024.v6n1a4"  # Replace with your PDF file path
 
-try:
-    # Read the PDF file in binary mode
-    with open(pdf_file_path, "rb") as pdf_file:
-        pdf_bytes = pdf_file.read()
-
     # Create a download button
     st.download_button(
         label="⬇️ Download PDF",
@@ -155,6 +150,7 @@ email = "david.khumalo@gmail.com"
 LinkedIn= "www.linkedin.com/in/david-vusumuzi-khumalo-1924a424"
 
 st.write(f"You can reach {name} at {email}{LinkedIn}.")
+
 
 
 
