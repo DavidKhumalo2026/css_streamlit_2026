@@ -62,10 +62,15 @@ if st.button("Download paper"):
                 file_name=filename,
                 mime="application/octet-stream"
             )
+
+
+
+
 # Add a contact section
 st.header("Contact Information")
 email = "david.khumalo@gmail.com"
 st.write(f"You can reach {name} at {email}.")
+
 
 
 
