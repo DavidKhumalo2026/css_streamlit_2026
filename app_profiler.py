@@ -35,30 +35,31 @@ st.write(f"**Affiliation:** {Affiliation}")
 st.write(f"**ORCiD:** {ORCiD}")
 
 
-# Sample DataFrame
-data = {
-    "Year": ["2024", "2025"],
-   
-}
-df = pd.DataFrame(data)
+# Set page title
+st.set_page_config(page_title="PDF Download")
 
-# App title
-st.title("Download CSV Example in Streamlit")
+st.title("📄 Download PDF File in Streamlit")
 
-# Display the DataFrame
-st.subheader("Data Table")
-st.dataframe(df)
+# Path to your local PDF file
+pdf_file_path = "https://doi.org/10.18772/26180197.2024.v6n1a4"  # Replace with your PDF file path
 
-# Convert DataFrame to CSV (without index)
-csv_data = df.to_csv(index=False)
+try:
+    # Read the PDF file in binary mode
+    with open(pdf_file_path, "rb") as pdf_file:
+        pdf_bytes = pdf_file.read()
 
-# Create a download button
-st.download_button(
-    label="📥 Download data as CSV",
-    data=csv_data,
-    file_name="my_table.csv",
-    mime="text/csv"
-)
+    # Create a download button
+    st.download_button(
+        label="⬇️ Download PDF",
+        data=pdf_bytes,
+        file_name="document.pdf",  # Name for the downloaded file
+        mime="application/pdf"
+    )
+
+except FileNotFoundError:
+    st.error(f"File '{pdf_file_path}' not found. Please check the path.")
+except Exception as e:
+    st.error(f"An error occurred: {e}")
 
 
 # Add a section for publications
@@ -160,6 +161,7 @@ email = "david.khumalo@gmail.com"
 LinkedIn= "www.linkedin.com/in/david-vusumuzi-khumalo-1924a424"
 
 st.write(f"You can reach {name} at {email}{LinkedIn}.")
+
 
 
 
