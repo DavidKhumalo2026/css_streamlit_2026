@@ -54,7 +54,6 @@ if st.button("Download paper"):
 
             # Create a BytesIO object for download
             file_data = BytesIO(response.content)
-
             # Show download button
             st.success(f"File '{filename}' fetched successfully!")
             st.download_button(
@@ -63,12 +62,11 @@ if st.button("Download paper"):
                 file_name=filename,
                 mime="application/octet-stream"
             )
-
-
 # Add a contact section
 st.header("Contact Information")
 email = "david.khumalo@gmail.com"
 st.write(f"You can reach {name} at {email}.")
+
 
 
 
