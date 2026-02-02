@@ -29,7 +29,7 @@ Affiliation = "South Africa Sports Medicine Association (SASMA)"
 # Display basic profile information
 st.header("Researcher Qualification, Interest, and Affiliation")
 st.write(f"**Qualifications:** {Qualifications}")
-st.write(f"**Interest:** {Interests}")
+st.write(f"**Interest:** {Interest}")
 st.write(f"**Affiliation:** {Affiliation}")
 
 # Add a section for publications
@@ -130,6 +130,7 @@ st.header("Contact Information")
 email = "david.khumalo@gmail.com"
 
 st.write(f"You can reach {name} at {email}.")
+
 
 
 
