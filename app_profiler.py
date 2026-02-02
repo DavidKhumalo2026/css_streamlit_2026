@@ -130,8 +130,9 @@ st.header("Contact Information")
 email = "david.khumalo@gmail.com"
 LinkedIn= "www.linkedin.com/in/david-vusumuzi-khumalo-1924a424
 
-st.write(f"You can reach {name} at {email}.")
-st.write(f"You can connect {name} at {LinkedIn}.")
+st.write(f"You can reach {name} at {email}{LinkedIn}.")
+
+
 
 
 
