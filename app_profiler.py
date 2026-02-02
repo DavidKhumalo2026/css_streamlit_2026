@@ -21,6 +21,19 @@ st.image(
     caption="Optimising performance (Lorush)"
 )
 
+# Researcher qualifications, interest, and affiliation
+Qualifications = "BSc(Hons),MBA,MSc(Med)"
+Research interests = "Physical activity epidemiology,Exerkines,Metabolic syndrome"
+Affiliation = "South Africa Sports Medicine Association (SASMA)"
+
+# Display basic profile information
+st.header("Researcher Qualification, Interest, and Affiliation")
+st.write(f"**Qualification:** {qualification}")
+st.write(f"**Research interests:** {interests}")
+st.write(f"**Affiliation:** {affiliation}")
+
+
+
 # Add a section for publications
 st.header("Publications")
 uploaded_file = st.file_uploader("Upload a CSV of Publications", type="csv")
@@ -119,5 +132,6 @@ st.header("Contact Information")
 email = "david.khumalo@gmail.com"
 
 st.write(f"You can reach {name} at {email}.")
+
 
 
