@@ -34,6 +34,75 @@ st.write(f"**Interest:** {Interest}")
 st.write(f"**Affiliation:** {Affiliation}")
 st.write(f"**ORCiD:** {ORCiD}")
 
+
+Here’s a complete, runnable Python example showing how to let users download a Pandas DataFrame as a CSV file in Streamlit using st.download_button.
+
+Pythonimport streamlit as st
+import pandas as pd
+
+# Sample DataFrame
+data = {
+    "Year": ["2024", "2025"],
+   
+}
+df = pd.DataFrame(data)
+
+# App title
+st.title("Download CSV Example in Streamlit")
+
+# Display the DataFrame
+st.subheader("Data Table")
+st.dataframe(df)
+
+# Convert DataFrame to CSV (without index)
+csv_data = df.to_csv(index=False)
+
+# Create a download button
+st.download_button(
+    label="📥 Download data as CSV",
+    data=csv_data,
+    file_name="my_table.csv",
+    mime="text/csv"
+)
+
+
+How It Works
+
+df.to_csv(index=False)
+Converts the DataFrame to CSV format without the index column.
+st.download_button
+
+label: Button text.
+data: The CSV string.
+file_name: The name of the downloaded file.
+mime: MIME type for CSV (text/csv).
+
+
+
+✅ Edge Cases Handled
+
+Works with any DataFrame size.
+No index column in the CSV unless you want it.
+UTF-8 encoding ensures special characters are preserved.
+
+
+If you want larger datasets to download faster, you can encode the CSV as bytes:
+Pythoncsv_bytes = df.to_csv(index=False).encode('utf-8')
+st.download_button("Download CSV", csv_bytes, "data.csv", "text/csv")
+
+
+Do you want me to extend this so the CSV is generated from user-uploaded data in Streamlit? That way, users can upload, view, and download their own tables.
+
+
+
+
+
+
+
+
+
+
+
 # Add a section for publications
 st.header("Publications")
 uploaded_file = st.file_uploader("Upload a CSV of Publications", type="csv")
@@ -133,6 +202,7 @@ email = "david.khumalo@gmail.com"
 LinkedIn= "www.linkedin.com/in/david-vusumuzi-khumalo-1924a424"
 
 st.write(f"You can reach {name} at {email}{LinkedIn}.")
+
 
 
 
