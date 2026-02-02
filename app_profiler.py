@@ -66,18 +66,7 @@ if st.button("Download paper"):
                 mime="application/octet-stream"
             )
 
-        except requests.exceptions.MissingSchema:
-            st.error("Invalid URL format. Please include http:// or https://")
-        except requests.exceptions.RequestException as e:
-            st.error(f"Error fetching file: {e}")
-
-
-
-
-
-
-
-# Add a section for publications
+        # Add a section for publications
 st.header("Publications")
 uploaded_file = st.file_uploader("Upload a CSV of Publications", type="csv")
 
@@ -176,6 +165,7 @@ email = "david.khumalo@gmail.com"
 LinkedIn= "www.linkedin.com/in/david-vusumuzi-khumalo-1924a424"
 
 st.write(f"You can reach {name} at {email}{LinkedIn}.")
+
 
 
 
