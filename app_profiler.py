@@ -9,6 +9,7 @@ st.title("Researcher Profile Page with STEM Data")
 name = "David Vusumuzi Khumalo"
 field = "Sport and Exercise Science"
 institution = "University of the Witwatersrand"
+linkedIn profile  ="LinkedIn profile"
 
 # Display basic profile information
 st.header("Researcher Overview")
@@ -25,12 +26,14 @@ st.image(
 Qualifications = "BSc(Hons),MBA,MSc(Med)"
 Interest = "Physical activity epidemiology,Exerkines,Metabolic syndrome"
 Affiliation = "South Africa Sports Medicine Association (SASMA)"
+ORCiD= "https://orcid.org/0000-0003-2846-3907"
 
 # Display basic profile information
 st.header("Researcher Qualification, Interest, and Affiliation")
 st.write(f"**Qualifications:** {Qualifications}")
 st.write(f"**Interest:** {Interest}")
 st.write(f"**Affiliation:** {Affiliation}")
+st.write(f"**ORCiD:** {ORCiD}")
 
 # Add a section for publications
 st.header("Publications")
@@ -131,6 +134,7 @@ email = "david.khumalo@gmail.com"
 LinkedIn= "www.linkedin.com/in/david-vusumuzi-khumalo-1924a424
 
 st.write(f"You can reach {name} at {email}{LinkedIn}.")
+
 
 
 
