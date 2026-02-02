@@ -9,7 +9,6 @@ st.title("Researcher Profile Page with STEM Data")
 name = "David Vusumuzi Khumalo"
 field = "Sport and Exercise Science"
 institution = "University of the Witwatersrand"
-linkedIn profile  ="LinkedIn profile"
 
 # Display basic profile information
 st.header("Researcher Overview")
@@ -134,6 +133,7 @@ email = "david.khumalo@gmail.com"
 LinkedIn= "www.linkedin.com/in/david-vusumuzi-khumalo-1924a424"
 
 st.write(f"You can reach {name} at {email}{LinkedIn}.")
+
 
 
 
