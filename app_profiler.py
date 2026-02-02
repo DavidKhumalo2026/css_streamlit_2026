@@ -34,10 +34,42 @@ st.write(f"**Interest:** {Interest}")
 st.write(f"**Affiliation:** {Affiliation}")
 st.write(f"**ORCiD:** {ORCiD}")
 
+# Streamlit app title
+st.header ("Publication")
+st.write ("Effectiveness of high-intensity interval training and moderate-intensity continuous training on cardiometabolic health in university labourers")
+# Input field for the file URL
+url = st.text_input("https://doi.org/10.18772/26180197.2024.v6n1a4")
+
+
+if st.button("Download paper"):
+    if not url.strip():
+        st.error("Please enter a valid URL.")
+    else:
+       try:
+            # Download the file
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()  # Raise error for bad status codes
+
+            # Extract filename from URL
+            filename = url.split("/")[-1] or "downloaded_file"
+
+            # Create a BytesIO object for download
+            file_data = BytesIO(response.content)
+
+            # Show download button
+            st.success(f"File '{filename}' fetched successfully!")
+            st.download_button(
+                label="Download File",
+                data=file_data,
+                file_name=filename,
+                mime="application/octet-stream"
+            )
+
 # Add a contact section
 st.header("Contact Information")
 email = "david.khumalo@gmail.com"
 st.write(f"You can reach {name} at {email}.")
+
 
 
 
