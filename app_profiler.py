@@ -116,6 +116,7 @@ elif data_option == "Weather Data":
 
 # Add a contact section
 st.header("Contact Information")
-email = "jane.doe@example.com"
+email = "david.khumalo@gmail.com"
 
 st.write(f"You can reach {name} at {email}.")
+
