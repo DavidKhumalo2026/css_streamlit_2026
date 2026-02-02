@@ -34,7 +34,10 @@ st.write(f"**Interest:** {Interest}")
 st.write(f"**Affiliation:** {Affiliation}")
 st.write(f"**ORCiD:** {ORCiD}")
 
-
+# Add a contact section
+st.header("Contact Information")
+email = "david.khumalo@gmail.com"
+st.writec (f"You can reach {name} at {email}.")
 
 
 
