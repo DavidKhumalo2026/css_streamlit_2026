@@ -37,7 +37,8 @@ st.write(f"**ORCiD:** {ORCiD}")
 # Add a contact section
 st.header("Contact Information")
 email = "david.khumalo@gmail.com"
-st.writec(f"You can reach {name} at {email}.")
+st.write(f"You can reach {name} at {email}.")
+
 
 
 
