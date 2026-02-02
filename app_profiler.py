@@ -35,11 +35,6 @@ st.write(f"**Affiliation:** {Affiliation}")
 st.write(f"**ORCiD:** {ORCiD}")
 
 
-Here’s a complete, runnable Python example showing how to let users download a Pandas DataFrame as a CSV file in Streamlit using st.download_button.
-
-Pythonimport streamlit as st
-import pandas as pd
-
 # Sample DataFrame
 data = {
     "Year": ["2024", "2025"],
@@ -202,6 +197,7 @@ email = "david.khumalo@gmail.com"
 LinkedIn= "www.linkedin.com/in/david-vusumuzi-khumalo-1924a424"
 
 st.write(f"You can reach {name} at {email}{LinkedIn}.")
+
 
 
 
