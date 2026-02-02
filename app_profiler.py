@@ -35,20 +35,46 @@ st.write(f"**Affiliation:** {Affiliation}")
 st.write(f"**ORCiD:** {ORCiD}")
 
 
-# Set page title
-st.set_page_config(page_title="Download publication")
+# Streamlit app title
+st.title("Publication")
 
-st.title("📄 Download Publications")
+# Input field for the file URL
+url = st.text_input("https://doi.org/10.18772/26180197.2024.v6n1a4")
 
-# Path to your local PDF file
-pdf_file_path = "https://doi.org/10.18772/26180197.2024.v6n1a4"  # Replace with your PDF file path
+if st.button("Fetch File"):
+    if not url.strip():
+        st.error("Please enter a valid URL.")
+    else:
+        try:
+            # Download the file
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()  # Raise error for bad status codes
 
-    # Create a download button
-    st.download_button(
-        label="⬇️ Download file",
-        file_name="https://doi.org/10.18772/26180197.2024.v6n1a4",  # Name for the downloaded file
-        mime="https://doi.org/10.18772/26180197.2024.v6n1a4"
-    )
+            # Extract filename from URL
+            filename = url.split("/")[-1] or "downloaded_file"
+
+            # Create a BytesIO object for download
+            file_data = BytesIO(response.content)
+
+            # Show download button
+            st.success(f"File '{filename}' fetched successfully!")
+            st.download_button(
+                label="Download File",
+                data=file_data,
+                file_name=filename,
+                mime="application/octet-stream"
+            )
+
+        except requests.exceptions.MissingSchema:
+            st.error("Invalid URL format. Please include http:// or https://")
+        except requests.exceptions.RequestException as e:
+            st.error(f"Error fetching file: {e}")
+
+
+
+
+
+
 
 # Add a section for publications
 st.header("Publications")
@@ -149,6 +175,7 @@ email = "david.khumalo@gmail.com"
 LinkedIn= "www.linkedin.com/in/david-vusumuzi-khumalo-1924a424"
 
 st.write(f"You can reach {name} at {email}{LinkedIn}.")
+
 
 
 
