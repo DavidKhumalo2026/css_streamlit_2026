@@ -41,7 +41,7 @@ st.title("Publication")
 # Input field for the file URL
 url = st.text_input("https://doi.org/10.18772/26180197.2024.v6n1a4")
 
-if st.button("Fetch File"):
+if st.button("Download paper"):
     if not url.strip():
         st.error("Please enter a valid URL.")
     else:
@@ -175,6 +175,7 @@ email = "david.khumalo@gmail.com"
 LinkedIn= "www.linkedin.com/in/david-vusumuzi-khumalo-1924a424"
 
 st.write(f"You can reach {name} at {email}{LinkedIn}.")
+
 
 
 
