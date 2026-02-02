@@ -66,12 +66,13 @@ if st.button("Download paper"):
                 mime="application/octet-stream"
             )
 
-        # Add a contact section
+# Add a contact section
 st.header("Contact Information")
 email = "david.khumalo@gmail.com"
 LinkedIn= "www.linkedin.com/in/david-vusumuzi-khumalo-1924a424"
 
-st.write(f"You can reach {name} at {email}  {LinkedIn}.")
+st.write(f"You can reach {name} at {email} or {LinkedIn}.")
+
 
 
 
