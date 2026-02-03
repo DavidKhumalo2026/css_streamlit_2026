@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 # Title of the app
-st.title("Researcher Profile Page with STEM Data")
+st.title("Researcher Profile Page")
 
 # Collect basic information
 name = "David Vusumuzi Khumalo"
@@ -39,6 +39,7 @@ st.write(f"**ORCiD:** {ORCiD}")
 st.header("Contact Information")
 email = "david.khumalo@gmail.com"
 st.write(f"You can reach {name} at {email}.")
+
 
 
 
